@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+   <navigator class="k-navigator" url="/pages/virtualCamera/virtualCamera">模拟ios原生拍照界面</navigator>
+</view>

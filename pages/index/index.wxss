@@ -1,0 +1,10 @@
+/**index.wxss**/
+.k-navigator {
+  text-align: center;
+  height: 80rpx;
+  width: 90%;
+  margin: 20rpx auto;
+  border-radius: 8rpx;
+  line-height: 80rpx;
+  background-color: #EECBEC;
+}

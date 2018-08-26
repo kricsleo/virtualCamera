@@ -1,0 +1,46 @@
+<!--pages/virtualCamera/virtualCamera.wxml-->
+<view class="container">
+
+     <!-- 相机开始 -->
+     <view class="camera-box" hover-class="none" hover-stop-propagation="false">
+        <camera wx:if="{{hasCameraScope}}" class="camera-container" device-position="{{isBack ? 'back' : 'front'}}" binderror="error" style="width: 100%; height: 920rpx;" animation="{{cameraShotingData}}"></camera> 
+     </view>
+   
+    <!-- 相机无权限时替代元素，不能使用'wx:else'，否则'bindopensetting'回调函数不起作用，可能是官方bug，谁知道呢 -->
+    <view hidden="{{hasCameraScope}}" class="camera-alter">
+        <view hidden="{{hasCameraScope}}" class="camera-cover">
+            <view class="camera-scope-container" hover-class="none" hover-stop-propagation="false">
+                <text>您需要开启相机权限才能进行操作</text>
+                <button bindtap="cancelCameraScope">取消</button>
+                <button open-type="openSetting" bindopensetting="confirmCameraScope">确定</button>  
+            </view>
+           
+        </view>
+    </view>
+     <!-- 相机结束 -->
+
+    <!-- 选择相机类型开始 -->
+    <view class="camera-type" animation="{{typeSwitchingData}}">
+        <text class="{{isSquare ? 'camera-text active' : 'camera-text'}}" bindtap="switchType" data-camera-type="square">正方形</text>
+        <text class="{{isNormal ? 'camera-text active' : 'camera-text'}}" bindtap="switchType" data-camera-type="normal">照片</text>
+    </view>
+    <!-- 选择相机类型结束 -->
+
+    <!-- 拍照按钮开始 -->
+    <view class="camera-footer" hover-stop-propagation="false">
+
+        <!-- 左侧相册按钮 -->
+        <image class="camera-album" src="{{album[ album.length > 0 ? album.length - 1 : 0]}}" mode="aspectFill" lazy-load="false" bindtap="showAlbum" animation="{{albumShotingData}}"></image>
+
+        <!-- 中间拍照按钮 -->
+        <view class="camera-shot-container" bindtap="shotPhoto" hover-stop-propagation="false">
+            <view class="camera-shot-outer" hover-stop-propagation="false"></view>
+            <view class="camera-shot-inner" hover-class="camera-shoting" hover-stop-propagation="false"></view>
+        </view>
+
+        <!-- 右侧切换前置/后置摄像头按钮 -->
+        <view class="camera-reverse" hover-class="camera-reverse-hover" hover-stop-propagation="false" bindtap="reverseCamera"></view>
+    </view>
+    <!-- 拍照按钮结束 -->
+
+</view>

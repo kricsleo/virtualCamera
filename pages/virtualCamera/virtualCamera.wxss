@@ -1,0 +1,189 @@
+/* pages/virtualCamera/virtualCamera.wxss */
+page {  
+    display: block;  
+    min-height: 100%;  
+    background-color: #000;  
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+.camera-box {
+    width: 100%;
+    height: 920rpx;
+}
+
+.camera-alter {
+    width: 100%;
+    height: 920rpx;
+    overflow: visible;
+    z-index: 9;
+}
+
+.camera-cover {
+    width: 100%;
+    height: 760rpx;
+    padding-top: 450rpx;
+    background-color: rgba(211, 211, 211, .6);
+}
+
+.camera-scope-container {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #fff;
+    width: 84%;
+    margin: 0 auto;
+    border-radius: 8rpx;
+    text-align: center;
+}
+
+.camera-scope-container text {
+    width: 100%;
+    height: 200rpx;
+    line-height: 200rpx;
+}
+
+.camera-scope-container button {
+    width: 50%;
+    height: 100rpx;
+    background-color: #fff;
+    border-top: 2rpx solid #ccc;
+    border-radius: 0;
+}
+
+.camera-scope-container button:after, .camera-scope-container button:before {
+    border: none;
+}
+
+.camera-scope-container button:nth-child(2) {
+    border-bottom-left-radius: 8rpx;
+    border-right: 2rpx solid #ccc;
+}
+.camera-scope-container button:last-child {
+    color: #4DC463;
+    border-bottom-right-radius: 8rpx;
+}
+
+
+.camera-type {
+    width: 100%;
+    height: 64rpx;
+    color: #fff;
+    padding: 24rpx 0 6rpx 0;
+}
+
+.camera-text {
+    display: inline-block;
+    height: 44rpx;
+    width: 250rpx;
+    text-align: center;
+    font-size: 16px;
+    line-height: 44rpx;
+}
+
+.active {
+    color: #e31d1a;
+    position: relative;
+}
+
+.active:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    bottom: -8rpx;
+    width: 8rpx;
+    height: 8rpx;
+    margin-left: -4rpx;
+    border-radius: 50%;
+    background-color: #e31d1a;
+}
+
+.camera-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.camera-album {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 8rpx;
+}
+
+.camera-shot-container {
+    position: relative;
+    width: 132rpx;
+    height: 132rpx;
+    margin: 0 auto;
+}
+
+.camera-shot-outer {
+    width: 112rpx;
+    height: 112rpx;
+    border: 10rpx solid #fff;
+    border-radius: 50%;
+}
+
+.camera-shot-inner {
+    position: absolute;
+    width: 104rpx;
+    height: 104rpx;
+    top: 14rpx;
+    right: 14rpx;
+    bottom: 14rpx;
+    left: 14rpx;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.camera-shoting {
+    animation: shoting .1s ease-in-out;
+}
+
+.camera-reverse {
+    width: 100rpx;
+    height: 100rpx;
+    background-image: url("data:image/svg+xml,%3C?xml version='1.0' standalone='no'?%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg t='1535185944153' class='icon' style='' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='1034' xmlns:xlink='http://www.w3.org/1999/xlink' width='200' height='200'%3E%3Cdefs%3E%3Cstyle type='text/css'%3E%3C/style%3E%3C/defs%3E%3Cpath d='M603.63 637.216c-26.228 22.058-57.912 34.712-91.63 34.712-72.72 0-132.572-57.93-141.78-123.93h61.22l-77.74-100-75.068 100h58.958c9.392 84 83.434 156 174.41 156 41.8 0 82.34-15.132 114.152-42.436l4.74-4.318-23.198-23.324-4.064 3.296z m27.842-239.446c-32.376-29.55-74.804-45.678-119.472-45.678-41.8 0-82.338 15.112-114.15 42.412l-4.742 4.104 23.198 23.22 4.066-3.412c25.854-21.744 58.394-34.01 91.628-34.01 72.686 0 132.548 57.594 141.782 127.594h-61.288l77.692 102.45L745.438 512h-59.024c-4.482-40-23.864-85.872-54.942-114.23z' p-id='1035' fill='%23ffffff'%3E%3C/path%3E%3Cpath d='M835 320h-123.45c-64.21-72-84.438-96-109.05-96h-177c-24.628 0-44.334 24-109.042 96H290v-32h-68v32H195C159.71 320 128 346.434 128 381.368v352.036C128 768.338 159.71 800 195 800h640c35.29 0 61-31.662 61-66.598V381.368C896 346.434 870.29 320 835 320zM864 733.402c0 18.526-12.458 34.598-29 34.598h-640c-17.476 0-35-17.328-35-34.598V381.368C160 365.036 176.252 352 195 352h133.724c4.018 0 6.45-0.398 11.536-6.4s15.404-20.016 22.16-27.59c22.592-25.332 38.914-43.83 50.632-54.264 9.492-8.45 12.422-7.746 12.45-7.746h177c0.032 0 3.222-0.726 13.418 8.438 12.282 11.042 29.41 33.68 53.116 60.396 5.776 6.51 14.428 16.22 18.634 20.88s8.504 6.286 11.542 6.286H835c17.664 0 29 11.93 29 29.368v352.034z' p-id='1036' fill='%23ffffff'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+.camera-reverse-hover {
+    animation: reversingCamera .1s ease-in-out;
+}
+
+.camera-scope {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 8rpx;
+    background-color: #69CD7D;
+}
+
+.camera-scope-hover {
+    background-color: #4DC463;
+}
+
+@keyframes shoting {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes reversingCamera {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .4;
+    }
+}
