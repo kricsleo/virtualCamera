@@ -1,6 +1,9 @@
 # 微信小程序单页面-模拟IOS相机页面
-<img src='./resources/virtualCameraNormal.png' title='正常效果图' style='display: inline-block; width: 300px;'>
-<img src='./resources/virtualCameraSquare.png' title='方形效果图' style='display: inline-block; width: 300px;'>
+
+<div align="center">
+  <img src='./resources/virtualCameraNormal.png' title='正常效果图' width="300px">
+  <img src='./resources/virtualCameraSquare.png' title='方形效果图' width="300px">
+</div>
 
 ## 功能
 - 如果没有相机权限则页面会切换到提示相机授权状态
