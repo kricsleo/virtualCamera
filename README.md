@@ -1,9 +1,9 @@
 # 微信小程序单页面-模拟IOS相机页面
 
 <div align="center">
-  <img src='./resources/virtualCameraNormal.png' title='正常效果图' width="300px">
-  <img src='./resources/virtualCameraSquare.png' title='方形效果图' width="300px">
-  <img src='./resources/noCameraScope.jpeg' title='无相机权限' width="300px">
+  <img src='./resources/virtualCameraNormal.png' title='正常效果图' width="200px">
+  <img src='./resources/virtualCameraSquare.png' title='方形效果图' width="200px">
+  <img src='./resources/noCameraScope.jpeg' title='无相机权限' width="200px">
 </div>
 
 ## 功能
